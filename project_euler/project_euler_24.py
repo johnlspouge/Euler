@@ -1,9 +1,10 @@
 #!/usr/bin/python
 
-import math
+from itertools import permutations as permutations
 
-N = 1000
+n = 10
+number = 1000000
 
-phi = (1+math.sqrt(5.0))/2.0
-
-print(1 + int((N - 1 + math.log10(5.0) / 2.0)/math.log10(phi)))
+perm = list(permutations(range(0, n)))
+s = str(perm[number - 1])
+print(s.replace(', ', '').replace('(', '').replace(')', ''))

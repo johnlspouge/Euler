@@ -1,12 +1,16 @@
 #!/usr/bin/python
 
+#import scipy.special
+
+#print (scipy.special.comb(40,20,exact=True))
+
 K = 20
 N = 2 * K
-comb = 1
+c = 1
 k = 1
 while k <= K:
-    comb *= N - k + 1
-    comb //= k
+    c *= N - k + 1
+    c //= k
     k += 1
 
-print(comb)
+print(c)
